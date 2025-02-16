@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial para Marcela!</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .convite {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .acao {
+            margin-top: 20px;
+        }
+        .botao {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #naoBtn {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="convite">
+        <h1>Marcela, Bora Chapar o Coco Comigo?</h1>
+        <p>Tenho um convite que você não vai querer recusar: Que tal uma noite de muita brisa e risadas? 😈</p>
+        <p>Prepare-se para altas aventuras e a certeza de momentos inesquecíveis! 😉</p>
+        <div class="acao">
+            <p>Aceita?</p>
+            <button id="simBtn" class="botao">SIM!</button>
+            <button id="naoBtn" class="botao">NÃO!</button>
+        </div>
+    </div>
+
+    <script>
+        const simBtn = document.getElementById('simBtn');
+        const naoBtn = document.getElementById('naoBtn');
+
+        naoBtn.addEventListener('mouseover', function() {
+            const randomX = Math.random() * (window.innerWidth - naoBtn.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - naoBtn.offsetHeight);
+
+            naoBtn.style.position = 'absolute';
+            naoBtn.style.left = randomX + 'px';
+            naoBtn.style.top = randomY + 'px';
+        });
+
+        simBtn.addEventListener('click', function() {
+            alert('Rua São Paulo, 3010');
+        });
+    </script>
+</body>
+</html>
